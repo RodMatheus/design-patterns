@@ -1,4 +1,4 @@
-package br.com.exemplo.factory.apple;
+package br.com.exemplo.factory.apple.halfSimple;
 
 public class Client {
 	

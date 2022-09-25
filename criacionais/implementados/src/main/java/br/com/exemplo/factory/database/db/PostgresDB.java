@@ -1,4 +1,4 @@
-package br.com.exemplo.factory.app.dbadapter.db;
+package br.com.exemplo.factory.database.db;
 
 public class PostgresDB implements DB {
 

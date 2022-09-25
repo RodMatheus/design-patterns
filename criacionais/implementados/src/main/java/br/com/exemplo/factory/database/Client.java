@@ -1,4 +1,4 @@
-package br.com.exemplo.factory.app.dbadapter;
+package br.com.exemplo.factory.database;
 
 public class Client {
 

@@ -1,4 +1,4 @@
-package br.com.exemplo.factory.apple.model;
+package br.com.exemplo.factory.apple.halfSimple.model;
 
 public class IPhoneX extends IPhone {
 
