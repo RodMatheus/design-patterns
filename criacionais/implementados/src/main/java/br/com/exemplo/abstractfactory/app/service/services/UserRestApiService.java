@@ -12,5 +12,4 @@ public class UserRestApiService implements UserService {
 		System.out.println("Removing User #" + id + " through Rest's interface");
 		return true;
 	}
-
 }

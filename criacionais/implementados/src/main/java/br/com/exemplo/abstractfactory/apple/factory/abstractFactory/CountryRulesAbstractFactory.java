@@ -5,6 +5,5 @@ import br.com.exemplo.abstractfactory.apple.model.packing.Packing;
 
 public interface CountryRulesAbstractFactory {
 	Certificate getCertificates();
-	
 	Packing getPacking();
 }

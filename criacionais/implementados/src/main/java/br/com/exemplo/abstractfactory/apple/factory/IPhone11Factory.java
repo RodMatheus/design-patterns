@@ -4,6 +4,7 @@ import br.com.exemplo.abstractfactory.apple.factory.abstractFactory.CountryRules
 import br.com.exemplo.abstractfactory.apple.model.iphone.IPhone;
 import br.com.exemplo.abstractfactory.apple.model.iphone.IPhone11;
 import br.com.exemplo.abstractfactory.apple.model.iphone.IPhone11Pro;
+import br.com.exemplo.abstractfactory.apple.model.iphone.IPhoneLevel;
 
 public class IPhone11Factory extends IPhoneFactory {
 
@@ -11,12 +12,11 @@ public class IPhone11Factory extends IPhoneFactory {
 		super(rules);
 	}
 
-	public IPhone createIPhone(String level) {
-		if(level.equals("standard")) {
-			return new IPhone11(rules);
-		} else if(level.equals("highEnd")) {
-			return new IPhone11Pro(rules);
-		} else return null;
+	public IPhone createIPhone(IPhoneLevel level) {
+		return switch (level) {
+			case STANDARD -> new IPhone11(rules);
+			case HIGH_END -> new IPhone11Pro(rules);
+			default -> null;
+		};
 	}
-
 }

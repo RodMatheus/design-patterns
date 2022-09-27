@@ -12,5 +12,4 @@ public class UserEJBService implements UserService {
 		System.out.println("Removing User #" + id + " through EJB's interface");
 		return true;
 	}
-
 }

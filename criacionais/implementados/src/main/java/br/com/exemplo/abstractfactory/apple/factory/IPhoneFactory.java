@@ -2,6 +2,7 @@ package br.com.exemplo.abstractfactory.apple.factory;
 
 import br.com.exemplo.abstractfactory.apple.factory.abstractFactory.CountryRulesAbstractFactory;
 import br.com.exemplo.abstractfactory.apple.model.iphone.IPhone;
+import br.com.exemplo.abstractfactory.apple.model.iphone.IPhoneLevel;
 
 public abstract class IPhoneFactory {
 	CountryRulesAbstractFactory rules;
@@ -10,11 +11,8 @@ public abstract class IPhoneFactory {
 		this.rules = rules;
 	}
 
-	public IPhone orderIPhone(String level) {
-		IPhone device = null;
-		
-		device = createIPhone(level);
-		
+	public IPhone orderIPhone(IPhoneLevel level) {
+		IPhone device = createIPhone(level);
 		device.getHardware();
 		device.assemble();
 		device.certificates();
@@ -23,5 +21,5 @@ public abstract class IPhoneFactory {
 		return device;
 	}
 	
-	protected abstract IPhone createIPhone(String level);
+	protected abstract IPhone createIPhone(IPhoneLevel level);
 }

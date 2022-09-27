@@ -10,6 +10,5 @@ public class CarRestApiService implements CarService {
 	@Override
 	public void update(String newModel) {
 		System.out.println("Updating " + newModel + " car through Rest's interface");
-	}
-	
+	}	
 }
